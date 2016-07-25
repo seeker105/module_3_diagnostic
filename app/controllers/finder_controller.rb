@@ -7,6 +7,6 @@ class FinderController < ApplicationController
 
   def search
     zipcode = params[:q].gsub("Search by zip...", "")
-    stations = FinderService.new.get_electric_and_propane(zipcode)
+    @stations = FinderService.new.get_electric_and_propane(zipcode)
   end
 end
