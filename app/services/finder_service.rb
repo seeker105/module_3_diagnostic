@@ -10,6 +10,15 @@ class FinderService
     end
     result = JSON.parse(response.body)
     byebug
+    # parse_result(result)
+  end
+
+  def parse_result(result)
+    stations = result.map do |station_hash|
+      Station.new(station_hash)
+    end
+    byebug
+    return stations
   end
 
 end
