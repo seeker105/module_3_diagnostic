@@ -1,5 +1,10 @@
 class FinderController < ApplicationController
   def index
-    @z
+
+  end
+
+  def search
+    zipcode = params[:q].gsub("Search by zip...", "")
+    
   end
 end
